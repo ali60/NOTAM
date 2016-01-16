@@ -1,0 +1,293 @@
+﻿<!-- 
+This resource dictionary is used by the MainWindow. 
+-->
+<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:vm="clr-namespace:NOTAM.ViewModel"
+  xmlns:vw="clr-namespace:NOTAM.View" xmlns:Behavior="clr-namespace:NOTAM.Behavior">
+
+    <!-- 
+  This template applies an AllOriginsView to an instance 
+  of the AllOriginsViewModel class shown in the main window.
+  -->
+    <DataTemplate DataType="{x:Type vm:AllOriginsViewModel}">
+        <vw:AllOriginsView />
+    </DataTemplate>
+
+    <!-- 
+  This template applies a OriginView to an instance  
+  of the OriginViewModel class shown in the main window.
+  -->
+    <DataTemplate DataType="{x:Type vm:OriginViewModel}">
+        <vw:OriginView />
+    </DataTemplate>
+
+
+    <DataTemplate DataType="{x:Type vm:NotamSummaryViewModel}">
+        <vw:NotamSummaryView />
+    </DataTemplate>
+
+    <!-- 
+  This template applies an AllFIRsView to an instance 
+  of the AllFIRsViewModel class shown in the main window.
+  -->
+    <DataTemplate DataType="{x:Type vm:AllFIRsViewModel}">
+        <vw:AllFIRsView />
+    </DataTemplate>
+
+    <!-- 
+  This template applies a OriginView to an instance  
+  of the OriginViewModel class shown in the main window.
+  -->
+    <DataTemplate DataType="{x:Type vm:FIRViewModel}">
+        <vw:FIRView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NotamViewModel}">
+        <vw:NotamView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NotamDetailViewModel}">
+        <vw:NotamDetailView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:IntlNotamDetailViewModel}">
+        <vw:IntlNotamDetailView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SnowtamDetailViewModel}">
+        <vw:SnowtamDetailView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllNotamsViewModel}">
+        <vw:AllNotamsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllIntlNotamsViewModel}">
+        <vw:AllIntlNotamsView />
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:IntlNotamViewModel}">
+        <vw:IntlNotamView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllSnowtamsViewModel}">
+        <vw:AllSnowtamView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AerodomViewModel}">
+        <vw:AerodomView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllAerodomsViewModel}">
+        <vw:AllAerodomsView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NotamCodeViewModel}">
+        <vw:NotamCodeView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllNotamCodesViewModel}">
+        <vw:AllNotamCodesView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:NotamTextViewModel}">
+        <vw:NotamTextView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SnowtamViewModel}">
+        <vw:SnowtamView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:SettingViewModel}">
+        <vw:SettingView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:UserViewModel}">
+        <vw:UserView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllUsersViewModel}">
+        <vw:AllUsersView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AllAftnsViewModel}">
+        <vw:AllAftnsView />
+    </DataTemplate>
+    
+    <DataTemplate DataType="{x:Type vm:AftnViewModel}">
+        <vw:AftnView />
+    </DataTemplate>
+
+    <!-- 
+  This style configures both of the main content areas in the main window.
+  -->
+
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="Margin"
+                    Value="4" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="Margin"
+                    Value="4" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="CharacterCasing" Value="Upper"/>
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError"
+                         Value="true">
+                <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style TargetType="{x:Type Behavior:PasswordValidator}">
+        
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError"
+                         Value="true">
+                <Setter Property="ToolTip"
+                            Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style TargetType="{x:Type ComboBox}">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Behavior:ComboBoxBehavior.CharacterCasing" Value="Upper" />
+    </Style>
+    <Style TargetType="{x:Type RadioButton}">
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="MainHCCStyle" TargetType="{x:Type HeaderedContentControl}">
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <Border 
+            Background="{StaticResource Brush_HeaderBackground}" 
+            BorderBrush="LightGray" 
+            BorderThickness="1" 
+            CornerRadius="5" 
+            Margin="4" 
+            Padding="4" 
+            SnapsToDevicePixels="True" 
+            >
+                        <TextBlock 
+              FontSize="14"
+              FontWeight="Bold"
+              Foreground="White" 
+              HorizontalAlignment="Center"  
+              Text="{TemplateBinding Content}" 
+              />
+                    </Border>
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <!-- 
+        This template ensures that content of a HeaderedContentControl 
+        fills the available vertical space. 
+        -->
+                <ControlTemplate TargetType="{x:Type HeaderedContentControl}">
+                    <DockPanel>
+                        <ContentPresenter 
+              DockPanel.Dock="Top"
+              ContentSource="Header" 
+              ContentTemplate="{TemplateBinding HeaderTemplate}" 
+              />
+                        <ContentPresenter 
+              ContentSource="Content" 
+              ContentTemplate="{TemplateBinding ContentTemplate}" 
+              />
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--
+  This style ensures that the borders in the main window are consistent.
+  -->
+    <Style x:Key="MainBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="WhiteSmoke" />
+        <Setter Property="BorderBrush" Value="LightGray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+    </Style>
+
+    <!--
+  This template explains how to render the list of commands on the left
+  side in the main window (the 'Control Panel' area).
+  -->
+    <DataTemplate x:Key="CommandsTemplate">
+        <ItemsControl IsTabStop="False" ItemsSource="{Binding}" Margin="6,2">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Margin="2,6">
+            <Hyperlink Command="{Binding Path=Command}">
+              <TextBlock Text="{Binding Path=DisplayName}" />
+            </Hyperlink>
+          </TextBlock>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DataTemplate>
+
+    <!-- 
+  This template explains how to render 
+  a tab item with a close button.
+  -->
+    <DataTemplate x:Key="ClosableTabItemTemplate">
+        <DockPanel Width="120">
+            <Button 
+        Command="{Binding Path=CloseCommand}"
+        Content="X"
+        Cursor="Hand"
+        DockPanel.Dock="Right"
+        Focusable="False"
+        FontFamily="Courier" 
+        FontSize="9"
+        FontWeight="Bold"  
+        Margin="0,1,0,0"
+        Padding="0"
+        VerticalContentAlignment="Bottom"
+        Width="16" Height="16" 
+        />
+            <ContentPresenter 
+        Content="{Binding Path=DisplayName}" 
+        VerticalAlignment="Center" 
+        />
+        </DockPanel>
+    </DataTemplate>
+
+    <!--
+  This template explains how to render the 'Workspace' content area in the main window.
+  -->
+    <DataTemplate x:Key="WorkspacesTemplate">
+        <TabControl 
+      Background="#f0f0f0"
+      IsSynchronizedWithCurrentItem="True" 
+      ItemsSource="{Binding}" 
+      ItemTemplate="{StaticResource ClosableTabItemTemplate}"
+      Margin="4"
+      FontSize="15"
+      />
+    </DataTemplate>
+
+<DataTemplate DataType="{x:Type vm:NotamSearchViewModel}">
+        <vw:NotamSearchView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:IntlNotamsSearchViewModel}">
+        <vw:IntlNotamSearch/>
+    </DataTemplate>
+
+
+</ResourceDictionary>

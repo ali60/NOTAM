@@ -1,0 +1,110 @@
+﻿<UserControl x:Class="NOTAM.View.SettingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:Behavior="clr-namespace:NOTAM.Behavior">
+
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="6" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type ValidationError}">
+                <TextBlock 
+          FontStyle="Italic"
+          Foreground="Red"
+          HorizontalAlignment="Right"
+          Margin="0,1"
+          Text="{Binding Path=ErrorContent}" 
+          />
+            </DataTemplate>
+
+        </Grid.Resources>
+
+        <!-- Username -->
+        <Label 
+      Grid.Row="0" Grid.Column="0" 
+      Content="Number Of Print " 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=userTxt}" 
+      />
+        <TextBox 
+      x:Name="userTxt" CharacterCasing="Normal"
+      Grid.Row="0" Grid.Column="2" MaxWidth="50"
+      Text="{Binding Path=PrintCount, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      
+      />
+
+        <!-- Password-->
+        <!--<TextBox 
+      x:Name="passTxt"
+      Grid.Row="2" Grid.Column="2" 
+      Text="{Binding Path=Password, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />-->
+
+
+
+
+        <!-- Password2-->
+        <Label x:Name="lblError" 
+      Grid.Row="5" Grid.Column="2" 
+       Foreground="Red" Content="{Binding Path=PasswordValidator}"
+      />
+
+        <Label x:Name="lblError2" 
+      Grid.Row="5" Grid.Column="2" 
+      Content="{Binding Path=PasswordError}" Foreground="Red"
+      />
+
+        <Behavior:PasswordValidator 
+      Box1="{Binding ElementName=passBox}" 
+      Box2="{Binding ElementName=pass2Box}"
+            ErrorMsg="{Binding ElementName=lblError}"
+            
+            />
+
+        <!-- Is Admin-->
+        <Label 
+      Grid.Row="1" Grid.Column="0" 
+      Content="Support Laser Printer" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=adminCheck}" 
+      />
+        <CheckBox  
+      x:Name="adminCheck"
+      Grid.Row="1" Grid.Column="2"
+      IsChecked="{Binding Path=IsLaser, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"      
+      Validation.ErrorTemplate="{x:Null}" Margin="0,6,0,24" Grid.RowSpan="3" />
+        <ContentPresenter 
+      Grid.Row="2" Grid.Column="2"
+      Content="{Binding ElementName=adminCheck, Path=(Validation.Errors).CurrentItem}"
+      />
+        <!-- SAVE BUTTON -->
+        <!-- SAVE BUTTON -->
+        <Button 
+      Grid.Row="8" Grid.Column="2"
+      Command="{Binding Path=SaveCommand}"
+      Content="_Save"
+      HorizontalAlignment="Right"
+      Margin="4,2" 
+      MinWidth="60" 
+      />
+    </Grid>
+
+</UserControl>

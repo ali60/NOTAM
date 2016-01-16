@@ -1,0 +1,178 @@
+﻿<UserControl x:Class="NOTAM.View.SnowtamView" FontSize="13" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <DataTemplate x:Key="{DataTemplateKey {x:Type ValidationError}}" DataType="{x:Type ValidationError}">
+                <TextBlock TextBlock.FontStyle="Italic" TextBlock.Foreground="#FFFF0000" HorizontalAlignment="Left" Margin="0,1" Text="{Binding Path=ErrorContent}" />
+            </DataTemplate>
+        </Grid.Resources>
+        <Label Grid.Row="0" Grid.Column="0" Content="Filling" HorizontalAlignment="Left" Target="{Binding ElementName=fillingTxt}" />
+        <TextBox Name="fillingTxt" Grid.Row="0" Grid.Column="1" IsEnabled="False" Text="{Binding Path=Filling, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Content="Originat:" Grid.Row="1" HorizontalAlignment="Left" Margin="1,0,0,0" Height="30" VerticalAlignment="Top" Grid.ColumnSpan="2" Target="{Binding ElementName=originTxt}" />
+        <ComboBox Name="originTxt" Grid.Row="1" Grid.Column="1" IsEnabled="False" Margin="0,2,0,0" HorizontalAlignment="Left" Width="Auto" ItemsSource="{Binding Path=OriginOptions, Mode=OneTime}" SelectedItem="{Binding Path=Originat, ValidatesOnDataErrors=True}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="2" Content="SW" HorizontalAlignment="Left" Target="{Binding ElementName=OpgroupTxt}" />
+        <TextBox Name="OpgroupTxt" Grid.Row="2" Grid.Column="1" MaxLength="2" Text="{Binding Path=Opgroup, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="1" Grid.Column="2" Content="Number" HorizontalAlignment="Left" Target="{Binding ElementName=numTxt}" />
+        <TextBox Name="numTxt" IsEnabled="False" Grid.Row="2" Grid.Column="2" Text="{Binding Path=SnowtamNum, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Aerodrome" HorizontalAlignment="Left" Target="{Binding ElementName=aeroTxt}" />
+        <!--TextBox Name="LoactionTxt" Grid.Row="3" Grid.Column="1" MaxLength="4" Text="{Binding Path=Location, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" /-->
+        <ComboBox x:Name="aeroTxt"
+            Grid.Row="3" Grid.Column="1" 
+            ItemsSource="{Binding Path=AerodomOptions, Mode=Default,UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding Path=SelectedAerodom, ValidatesOnDataErrors=True}"
+            IsEditable="True"/>
+
+        <Label Content="Aerodrome" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="3" Target="{Binding ElementName=AerodomeTxt}" />
+        <TextBox Name="AerodomeTxt" Grid.Row="2" Grid.Column="3" MaxLength="3" IsReadOnly="True" Text="{Binding Path=Aerodome, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="1" Grid.Column="4" Content="Date/Time" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Target="{Binding ElementName=DateTimeTxt}" />
+        <TextBox Name="DateTimeTxt" Grid.Row="2" Grid.Column="4" MaxLength="8" Text="{Binding Path=DateTimeT, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        
+        <Label Grid.Row="4" Grid.Column="0" Content="B) Date/Time" HorizontalAlignment="Left" Target="{Binding ElementName=DateTimeBTxt}" />
+        <TextBox Name="DateTimeBTxt" Grid.Column="0" Grid.Row="5" MaxLength="8" 
+                 Text="{Binding Path=DateTimeB, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="4" Grid.Column="1" Content="C) Runway" HorizontalAlignment="Left" Target="{Binding ElementName=RunwayTxt}" />
+        <TextBox Name="RunwayTxt" Grid.Row="5" Grid.Column="1" MaxLength="3" 
+                 Text="{Binding Path=Runway, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+                 Validation.ErrorTemplate="{x:Null}"  />
+        <Label Grid.Row="4" Grid.Column="2" Content="D) RunwayLen" HorizontalAlignment="Left" Target="{Binding ElementName=RunwayLenTxt}" />
+        <TextBox Name="RunwayLenTxt" Grid.Row="5" Grid.Column="2" MaxLength="4" Text="{Binding Path=RunwayLen, ValidatesOnDataErrors=True, 
+            UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" LostFocus="ItemLostFocus"/>
+        <Label Grid.Row="4" Grid.Column="3" Content="E) Runway Width" HorizontalAlignment="Left" Target="{Binding ElementName=RunwayWidthTxt}" />
+        <TextBox Name="RunwayWidthTxt" Grid.Row="5" Grid.Column="3" Text="{Binding Path=RunwayWidth, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="4" Grid.Column="4" Content="F) Depositon" HorizontalAlignment="Left" Target="{Binding ElementName=DepositonTxt}" />
+        <TextBox Name="DepositonTxt" Grid.Row="5" Grid.Column="4" Text="{Binding Path=Depositon, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="4" Grid.Column="5" Content="G) Depth" HorizontalAlignment="Left" Target="{Binding ElementName=DepthTxt}" />
+        <TextBox Name="DepthTxt" Grid.Row="5" Grid.Column="5" Text="{Binding Path=Depth, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="0" Content="H)Friction*" HorizontalAlignment="Left" Target="{Binding ElementName=FrictionTxt}" />
+        <TextBox Name="FrictionTxt" Grid.Row="7" Grid.Column="0" Text="{Binding Path=Friction, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="1" Content="J)SnowBank" HorizontalAlignment="Left" Target="{Binding ElementName=SnowBankTxt}" />
+        <TextBox Name="SnowBankTxt" Grid.Row="7" Grid.Column="1" Text="{Binding Path=SnowBank, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="2" Content="K)RunwayLight" HorizontalAlignment="Left" Target="{Binding ElementName=RunAwayLightTxt}" />
+        <TextBox Name="RunAwayLightTxt" Grid.Row="7" Grid.Column="2" Text="{Binding Path=RunAwayLight, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="3" Content="L)Further" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherTxt}" />
+        <TextBox Name="FurtherTxt" Grid.Row="7" Grid.Column="3" Text="{Binding Path=Further, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="4" Content="M)FurtherClearance" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherClearanceTxt}" />
+        <TextBox Name="FurtherClearanceTxt" Grid.Row="7" Grid.Column="4" 
+                 Text="{Binding Path=FurtherClearance, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="5" Content="N)Taxiway" HorizontalAlignment="Left" Target="{Binding ElementName=TaxiwayTxt}" />
+        <TextBox Name="TaxiwayTxt" Grid.Row="7" Grid.Column="5" Text="{Binding Path=Taxiway, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="6" Grid.Column="6" Content="P)Taxiway Snowbank" HorizontalAlignment="Left" Target="{Binding ElementName=TaxiwaySnowbankTxt}" />
+        <TextBox Name="TaxiwaySnowbankTxt" Grid.Row="7" Grid.Column="6" Text="{Binding Path=TaxiwaySnowbank, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="0" Content="B)" HorizontalAlignment="Left" Target="{Binding ElementName=DateTime2Txt}" />
+        <TextBox Name="DateTime2Txt" MaxLength="8" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="1" 
+                 Text="{Binding Path=ObsrvDate2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="1" Content="C)" HorizontalAlignment="Left" Target="{Binding ElementName=Runway2Txt}" />
+        <TextBox Name="Runway2Txt" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Path=Runway2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="2" Content="D)" HorizontalAlignment="Left" Target="{Binding ElementName=ClearedRunwayLen2Txt}" />
+        <TextBox Name="ClearedRunwayLen2Txt" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding Path=ClearedRunwayLen2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="3" Content="E)" HorizontalAlignment="Left" Target="{Binding ElementName=ClearedRunwayWidth2Txt}" />
+        <TextBox Name="ClearedRunwayWidth2Txt" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="1" Text="{Binding Path=ClearedRunwayWidth2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="4" Content="F)" HorizontalAlignment="Left" Target="{Binding ElementName=Depositon2Txt}" />
+        <TextBox Name="Depositon2Txt" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="1" Text="{Binding Path=Depositon2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="8" Grid.Column="5" Content="G)" HorizontalAlignment="Left" Target="{Binding ElementName=MeanDepth2Txt}" />
+        <TextBox Name="MeanDepth2Txt" Grid.Row="9" Grid.Column="5" Grid.ColumnSpan="1" Text="{Binding Path=MeanDepth2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="0" Content="H)" HorizontalAlignment="Left" Target="{Binding ElementName=Friction2Txt}" />
+        <TextBox Name="Friction2Txt" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding Path=Friction2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="1" Content="J)" HorizontalAlignment="Left" Target="{Binding ElementName=CriticalSnowbank2Txt}" />
+        <TextBox Name="CriticalSnowbank2Txt" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Path=CriticalSnowbank2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="2" Content="K)" HorizontalAlignment="Left" Target="{Binding ElementName=RunwayLight2Txt}" />
+        <TextBox Name="RunwayLight2Txt" Grid.Row="11" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding Path=RunwayLight2}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="3" Content="L)" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherClearance2Txt}" />
+        <TextBox Name="FurtherClearance2Txt" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="1" 
+                 Text="{Binding Path=FurtherClearance2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="4" Content="M)" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherClearanceexp2Txt}" />
+        <TextBox Name="FurtherClearanceexp2Txt" Grid.Row="11" Grid.Column="4" Grid.ColumnSpan="1" Text="{Binding Path=FurtherClearanceexp2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="5" Content="N)" HorizontalAlignment="Left" Target="{Binding ElementName=Taxiway2Txt}" />
+        <TextBox Name="Taxiway2Txt" Grid.Row="11" Grid.Column="5" Grid.ColumnSpan="1" Text="{Binding Path=Taxiway2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="10" Grid.Column="6" Content="P)" HorizontalAlignment="Left" Target="{Binding ElementName=TaxiwaySnowbank2Txt}" />
+        <TextBox Name="TaxiwaySnowbank2Txt" Grid.Row="11" Grid.Column="6" Grid.ColumnSpan="1" Text="{Binding Path=TaxiwaySnowbank2, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="0" Content="B)" HorizontalAlignment="Left" Target="{Binding ElementName=DateTime3Txt}" />
+        <TextBox Name="DateTime3Txt" Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="1" MaxLength="8" 
+                 Text="{Binding Path=ObsrvDate3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="1" Content="C)" HorizontalAlignment="Left" Target="{Binding ElementName=Runway3Txt}" />
+        <TextBox Name="Runway3Txt" Grid.Row="13" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Path=Runway3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="2" Content="D)" HorizontalAlignment="Left" Target="{Binding ElementName=ClearedRunwayLen3Txt}" />
+        <TextBox Name="ClearedRunwayLen3Txt" Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding Path=ClearedRunwayLen3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="3" Content="E)" HorizontalAlignment="Left" Target="{Binding ElementName=ClearedRunwayWidth3Txt}" />
+        <TextBox Name="ClearedRunwayWidth3Txt" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="1" Text="{Binding Path=ClearedRunwayWidth3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="4" Content="F)" HorizontalAlignment="Left" Target="{Binding ElementName=Depositon3Txt}" />
+        <TextBox Name="Depositon3Txt" Grid.Row="13" Grid.Column="4" Grid.ColumnSpan="1" Text="{Binding Path=Depositon3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="12" Grid.Column="5" Content="G)" HorizontalAlignment="Left" Target="{Binding ElementName=MeanDepth3Txt}" />
+        <TextBox Name="MeanDepth3Txt" Grid.Row="13" Grid.Column="5" Grid.ColumnSpan="1" Text="{Binding Path=MeanDepth3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="0" Content="H)" HorizontalAlignment="Left" Target="{Binding ElementName=Friction3Txt}" />
+        <TextBox Name="Friction3Txt" Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="1" Text="{Binding Path=Friction3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="1" Content="J)" HorizontalAlignment="Left" Target="{Binding ElementName=CriticalSnowbank3Txt}" />
+        <TextBox Name="CriticalSnowbank3Txt" Grid.Row="15" Grid.Column="1" Grid.ColumnSpan="1" Text="{Binding Path=CriticalSnowbank3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="2" Content="K)" HorizontalAlignment="Left" Target="{Binding ElementName=RunwayLight3Txt}" />
+        <TextBox Name="RunwayLight3Txt" Grid.Row="15" Grid.Column="2" Grid.ColumnSpan="1" Text="{Binding Path=RunwayLight3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="3" Content="L)" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherClearance3Txt}" />
+        <TextBox Name="FurtherClearance3Txt" Grid.Row="15" Grid.Column="3" Grid.ColumnSpan="1" Text="{Binding Path=FurtherClearance3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="4" Content="M)" HorizontalAlignment="Left" Target="{Binding ElementName=FurtherClearanceexp3Txt}" />
+        <TextBox Name="FurtherClearanceexp3Txt" Grid.Row="15" Grid.Column="4" Grid.ColumnSpan="1" Text="{Binding Path=FurtherClearanceexp3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="5" Content="N)" HorizontalAlignment="Left" Target="{Binding ElementName=Taxiway3Txt}" />
+        <TextBox Name="Taxiway3Txt" Grid.Row="15" Grid.Column="5" Grid.ColumnSpan="1" Text="{Binding Path=Taxiway3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="14" Grid.Column="6" Content="P)" HorizontalAlignment="Left" Target="{Binding ElementName=TaxiwaySnowbank3Txt}" />
+        <TextBox Name="TaxiwaySnowbank3Txt" Grid.Row="15" Grid.Column="6" Grid.ColumnSpan="1" Text="{Binding Path=TaxiwaySnowbank3, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="16" Grid.Column="1" Content="Apron" HorizontalAlignment="Left" />
+        <Label Grid.Row="16" Grid.Column="4" Content="Next" HorizontalAlignment="Left" />
+        <Label Grid.Row="17" Grid.Column="0" Content="R)" HorizontalAlignment="Left" Target="{Binding ElementName=ApronTxt}" />
+        <TextBox Name="ApronTxt" Grid.Row="17" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=Apron, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="17" Grid.Column="3" Content="S)" HorizontalAlignment="Left" Target="{Binding ElementName=NextObsrvTxt}" />
+        <TextBox Name="NextObsrvTxt" Grid.Row="17" Grid.Column="4" Grid.ColumnSpan="2" Text="{Binding Path=NextObsrv, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" />
+        <Label Grid.Row="19" Content="T)" HorizontalAlignment="Left" Grid.RowSpan="2" Target="{Binding ElementName=FreeTexttTxt}" />
+        <TextBox Name="FreeTexttTxt" Grid.Row="19" Grid.Column="1" Grid.ColumnSpan="7" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto" MaxLines="8" Grid.RowSpan="3" Margin="12,1,0,7" Text="{Binding Path=FreeTextt, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" Validation.ErrorTemplate="{x:Null}" KeyDown="FreeTexttTxt_KeyDown" />
+        <Button Grid.Row="22" Content="_Localize" HorizontalAlignment="Left" MinWidth="60" Grid.ColumnSpan="4" Grid.RowSpan="3" Margin="12,7,0,23" Command="{Binding Path=LocalizeCommand}" />
+        <Button Grid.Row="22" Grid.Column="8" Content="Next" HorizontalAlignment="Left" Margin="0,10,0,26" MinWidth="60" Grid.ColumnSpan="3" Grid.RowSpan="3" Command="{Binding Path=SendCommand}" Click="Button_Click" />
+        <Button Grid.Row="24" Grid.Column="12" Content="Help" HorizontalAlignment="Left" Margin="0,10,0,26" MinWidth="60" Grid.ColumnSpan="3" Grid.RowSpan="3" Command="{Binding Path=HelpCommand}" />
+        <Label Name="ErrorMessageLable"  Grid.Row="25" Grid.Column="2" Content="{Binding Path=ErrorMessage}" Grid.ColumnSpan="4"  HorizontalAlignment="Left" Foreground="Red" />
+    </Grid>
+</UserControl>

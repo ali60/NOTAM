@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="NOTAM.View.OriginView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"                         
+             HorizontalAlignment="Center"
+  VerticalAlignment="Center"  
+  Width="400">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="6" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type ValidationError}">
+                <TextBlock 
+          FontStyle="Italic"
+          Foreground="Red"
+          HorizontalAlignment="Right"
+          Margin="0,1"
+          Text="{Binding Path=ErrorContent}" 
+          />
+            </DataTemplate>
+        </Grid.Resources>
+
+        <!-- CUSTOMER TYPE -->
+        <Label 
+      Grid.Row="0" Grid.Column="0" 
+      Content="Code:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=codeTxt}" 
+      />
+        <TextBox 
+      x:Name="codeTxt"
+      Grid.Row="0" Grid.Column="2" 
+      Text="{Binding Path=Code, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+      
+        <ContentPresenter 
+      Grid.Row="1" Grid.Column="2"
+      Content="{Binding ElementName=customerTypeCmb, Path=(Validation.Errors).CurrentItem}"
+      />
+
+        <!-- NAME-->
+        <Label 
+      Grid.Row="2" Grid.Column="0" 
+      Content="Name:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=nameTxt}"
+      />
+        <TextBox 
+      x:Name="nameTxt"
+      Grid.Row="2" Grid.Column="2" 
+      Text="{Binding Path=Name, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <ContentPresenter 
+      Grid.Row="3" Grid.Column="2"
+      Content="{Binding ElementName=nameTxt, Path=(Validation.Errors).CurrentItem}"
+      />
+
+        <!-- Serial-->
+        <Label 
+      Grid.Row="4" Grid.Column="0" 
+      Content="_Serial" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=serialTxt}" 
+      />
+        <TextBox 
+      x:Name="serialTxt"
+      Grid.Row="4" Grid.Column="2" 
+      Text="{Binding Path=Serial, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <ContentPresenter 
+      Grid.Row="5" Grid.Column="2"
+      Content="{Binding ElementName=serialTxt, Path=(Validation.Errors).CurrentItem}"
+      />
+
+        <!-- E-MAIL-->
+        <Label 
+      Grid.Row="6" Grid.Column="0" 
+      Content="_CenterType:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=centerTxt}" 
+      />
+        <TextBox 
+      x:Name="centerTxt"
+      Grid.Row="6" Grid.Column="2" 
+      Text="{Binding Path=CenterType, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <ContentPresenter 
+      Grid.Row="7" Grid.Column="2"
+      Content="{Binding ElementName=centerTxt, Path=(Validation.Errors).CurrentItem}"
+      />
+
+        <!-- SAVE BUTTON -->
+        <Button 
+      Grid.Row="8" Grid.Column="2"
+      Command="{Binding Path=SaveCommand}"
+      Content="_Save"
+      HorizontalAlignment="Right"
+      Margin="4,2" 
+      MinWidth="60" 
+      />
+    </Grid>
+</UserControl>

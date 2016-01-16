@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Action_NotAuthorized" xml:space="preserve">
+    <value>User not authorized for this action</value>
+  </data>
+  <data name="AerodomViewModel_DisplayName" xml:space="preserve">
+    <value>New Aerodom</value>
+  </data>
+  <data name="AftnViewModel_DisplayName" xml:space="preserve">
+    <value>New Aftn</value>
+  </data>
+  <data name="AftnViewModel_Exception_CannotSave" xml:space="preserve">
+    <value>Can not save Aftn</value>
+  </data>
+  <data name="AllAerodomsViewModel_DisplayName" xml:space="preserve">
+    <value>All Aerodoms</value>
+  </data>
+  <data name="AllAftnsViewModel_DisplayName" xml:space="preserve">
+    <value>All Aftns</value>
+  </data>
+  <data name="AllCountriesViewModel_DisplayName" xml:space="preserve">
+    <value>All Countries</value>
+  </data>
+  <data name="AllFIRsViewModel_DisplayName" xml:space="preserve">
+    <value>All FIRs</value>
+  </data>
+  <data name="AllNotamCodesViewModel_DisplayName" xml:space="preserve">
+    <value>All NOTAM Codes</value>
+  </data>
+  <data name="AllNotamsViewModel_DisplayName" xml:space="preserve">
+    <value>VALID NOTAMS</value>
+  </data>
+  <data name="AllOriginsViewModel_DisplayName" xml:space="preserve">
+    <value>All Origins</value>
+  </data>
+  <data name="AllSnowtamsViewModel_DisplayName" xml:space="preserve">
+    <value>Valid SNOWTAMS</value>
+  </data>
+  <data name="AllUsersViewModel_DisplayName" xml:space="preserve">
+    <value>All Users</value>
+  </data>
+  <data name="ArchiveNotamsViewModel_DisplayName" xml:space="preserve">
+    <value>Archive NOTAMS</value>
+  </data>
+  <data name="ArchiveSnowtamsViewModel_DisplayName" xml:space="preserve">
+    <value>Archive SNOWTAMS</value>
+  </data>
+  <data name="CNotamViewModel_DisplayName" xml:space="preserve">
+    <value>C NOTAMS</value>
+  </data>
+  <data name="CountryViewModel_DisplayName" xml:space="preserve">
+    <value>New Country</value>
+  </data>
+  <data name="FIRViewModel_DisplayName" xml:space="preserve">
+    <value>New FIR</value>
+  </data>
+  <data name="HoldNotamsViewModel_DisplayName" xml:space="preserve">
+    <value>Hold NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_CancelNotam" xml:space="preserve">
+    <value>C NOTAM</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewAerodom" xml:space="preserve">
+    <value>New Aerodom</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewAftn" xml:space="preserve">
+    <value>New Aftn</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewFIR" xml:space="preserve">
+    <value>New FIR</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewNotam" xml:space="preserve">
+    <value>N NOTAM</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewNotamCode" xml:space="preserve">
+    <value>New NOTAM Code</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewOrigins" xml:space="preserve">
+    <value>New Origin</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewUser" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ReplaceNotam" xml:space="preserve">
+    <value>R NOTAM</value>
+  </data>
+  <data name="MainWindowViewModel_Command_RunArchive" xml:space="preserve">
+    <value>Run archive</value>
+  </data>
+  <data name="MainWindowViewModel_Command_RunSummary" xml:space="preserve">
+    <value>Run Summary</value>
+  </data>
+  <data name="MainWindowViewModel_Command_SearchIntlNotams" xml:space="preserve">
+    <value>International NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_Snowtam" xml:space="preserve">
+    <value>New SNOWTAM</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllAerodoms" xml:space="preserve">
+    <value>All Aerodoms</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllAftns" xml:space="preserve">
+    <value>All Aftns</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllArchiveNotams" xml:space="preserve">
+    <value>Archive NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllArichiveSnowtams" xml:space="preserve">
+    <value>Archive SNOWTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllFIRs" xml:space="preserve">
+    <value>All FIRs</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllHoldNotams" xml:space="preserve">
+    <value>Hold NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllNotamCodes" xml:space="preserve">
+    <value>All NOTAM Codes</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllNotams" xml:space="preserve">
+    <value>VALID NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllOrigins" xml:space="preserve">
+    <value>All Origins</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllSnowtams" xml:space="preserve">
+    <value>Valid SNOWTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_ViewAllUsers" xml:space="preserve">
+    <value>All Users</value>
+  </data>
+  <data name="MainWindowViewModel_DisplayName" xml:space="preserve">
+    <value>AIS Admin</value>
+    <comment>Title of the main window</comment>
+  </data>
+  <data name="NotamCodeViewModel_DisplayName" xml:space="preserve">
+    <value>New NOTAM Code</value>
+  </data>
+  <data name="NotamDetailViewModel_DisplayName" xml:space="preserve">
+    <value>New NOTAM Detail</value>
+  </data>
+  <data name="NotamSearchViewModel_DisplayName" xml:space="preserve">
+    <value>Search NOTAMS     </value>
+  </data>
+  <data name="NotamSummary_DisplayName" xml:space="preserve">
+    <value>Notam Summary Report</value>
+  </data>
+  <data name="NotamViewModel_DisplayName" xml:space="preserve">
+    <value>New NOTAM</value>
+  </data>
+  <data name="NotamViewModel_Exception_CannotLoad" xml:space="preserve">
+    <value>Can not load an invalid NOTAM</value>
+  </data>
+  <data name="NotValidStateForArchive" xml:space="preserve">
+    <value>Notam status is not valid for being archived</value>
+  </data>
+  <data name="OriginViewModel_DisplayName" xml:space="preserve">
+    <value>New Origin</value>
+  </data>
+  <data name="OriginViewModel_Exception_CannotSave" xml:space="preserve">
+    <value>Cannot save an invalid Origin.</value>
+    <comment>The exception message shown if you call Save on an invalid CustomerViewModel object.</comment>
+  </data>
+  <data name="RNotamViewModel_DisplayName" xml:space="preserve">
+    <value>R NOTAM</value>
+  </data>
+  <data name="SnowtamViewModel_DisplayName" xml:space="preserve">
+    <value>New SNOWTAM</value>
+  </data>
+  <data name="UserViewModel_DisplayName" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="AllArchAndValidNotamsViewModel_DisplayName" xml:space="preserve">
+    <value>All NOTAMS</value>
+  </data>
+  <data name="MainWindowViewModel_Command_NewFreeStyle" xml:space="preserve">
+    <value>Free Style</value>
+  </data>
+  <data name="UserViewModel_SettingName" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="MainWindowViewModel_Command_Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+</root>

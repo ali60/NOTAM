@@ -1,0 +1,5 @@
+<Configuration>
+  <NamespaceFolders>
+    <SkipFolder>4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model</SkipFolder>
+  </NamespaceFolders>
+</Configuration>

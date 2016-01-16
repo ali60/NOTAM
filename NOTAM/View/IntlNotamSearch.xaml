@@ -1,0 +1,237 @@
+﻿<UserControl x:Class="NOTAM.View.IntlNotamSearch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:Behavior="clr-namespace:NOTAM.Behavior" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Margin="4">
+
+        <i:Interaction.Behaviors>
+            <Behavior:ValidationExceptionBehavior />
+        </i:Interaction.Behaviors>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="128*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type ValidationError}">
+                <TextBlock 
+          FontStyle="Italic"
+          Foreground="Red"
+          HorizontalAlignment="Left"
+          Margin="0,1"
+          Text="{Binding Path=ErrorContent}" 
+          />
+            </DataTemplate>
+        </Grid.Resources>
+
+
+        <!-- DATE -->
+        <Label 
+      Grid.Row="0" Grid.Column="0" 
+      Content="FIR:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=FIRTxt}" 
+      />
+        <ComboBox 
+      x:Name="firTxt" 
+      Grid.Row="0" Grid.Column="1" 
+      ItemsSource="{Binding Path=FirOptions, Mode=OneTime}"
+      SelectedItem="{Binding Path=FIR, ValidatesOnDataErrors=True}"
+      IsEditable="True"/>
+
+        <Label 
+      Grid.Row="0" Grid.Column="3" 
+      Content="Origin:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=OriginTxt}" 
+      />
+        <TextBox 
+      x:Name="OriginTxt"
+      Grid.Row="0" Grid.Column="4" 
+      Text="{Binding Path=OriginItem, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+
+        <!-- Aero-->
+        <Label 
+      Grid.Row="1" Grid.Column="0" 
+      Content="Aerodom:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=AerodomTxt}" 
+      />
+        <ComboBox 
+      x:Name="aeroTxt" 
+      Grid.Row="1" Grid.Column="1"  
+      ItemsSource="{Binding Path=AerodomOptions, Mode=Default,UpdateSourceTrigger=PropertyChanged}"
+      SelectedItem="{Binding Path=Aerodom, ValidatesOnDataErrors=True}"
+      IsEditable="True" Height="22" />
+        <Label 
+      Grid.Row="1" Grid.Column="3" 
+      Content="Type:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=TypeTxt}" 
+      />
+        <TextBox 
+      x:Name="TypeTxt"
+      Grid.Row="1" Grid.Column="4" 
+      Text="{Binding Path=Type, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="2" Grid.Column="0" 
+      Content="Year:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=YearTxt}" 
+      />
+        <TextBox 
+      x:Name="YearTxt"
+      Grid.Row="2" Grid.Column="1" 
+      Text="{Binding Path=Year, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="2" Grid.Column="3" 
+      Content="QCode:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=QcodeTxt}" 
+      />
+        <TextBox 
+      x:Name="QcodeTxt"
+      Grid.Row="2" Grid.Column="4" 
+      Text="{Binding Path=QCode, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="3" Grid.Column="0" 
+      Content="From Number" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=FromTxt}" 
+      />
+        <TextBox 
+      x:Name="FromTxt"
+      Grid.Row="3" Grid.Column="1" 
+      Text="{Binding Path=From, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="3" Grid.Column="3" 
+      Content="To Number:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=ToTxt}" 
+      />
+        <TextBox 
+      x:Name="ToTxt"
+      Grid.Row="3" Grid.Column="4" 
+      Text="{Binding Path=To, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="4" Grid.Column="0" 
+      Content="From Date" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=FromTxt}" 
+      />
+        <TextBox 
+      x:Name="FromDateTxt"
+      Grid.Row="4" Grid.Column="1" 
+      Text="{Binding Path=FromDate, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <Label 
+      Grid.Row="4" Grid.Column="3" 
+      Content="To Date:" 
+      HorizontalAlignment="Right"
+      Target="{Binding ElementName=ToDateTxt}" 
+      />
+        <TextBox 
+      x:Name="ToDateTxt"
+      Grid.Row="4" Grid.Column="4" 
+      Text="{Binding Path=ToDate, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+
+        <!-- RUN BUTTON -->
+        <Button 
+      Grid.Row="5" Grid.Column="0"
+      Command="{Binding Path=RunCommand}"
+      Content="Generate Report"
+      HorizontalAlignment="Left"
+      Margin="0,2,1,2" 
+      MinWidth="70" Width="Auto" Height="Auto"/>
+        <Button 
+      Grid.Row="5" Grid.Column="1"
+      Command="{Binding Path=ValidNotamsCommand}"
+      Content="Valid Notams"
+      HorizontalAlignment="Left"
+      Margin="5,2,5,2" 
+      MinWidth="70" Width="Auto" Height="Auto"/>
+        <Button 
+      Grid.Row="5" Grid.Column="2"
+      Command="{Binding Path=SaveCommand}"
+      Content="Save to File"
+      HorizontalAlignment="Left"
+      Margin="10,2,54,2" 
+      MinWidth="70" Width="120" Height="Auto" Grid.ColumnSpan="3" />
+        <Button 
+      Grid.Row="5" Grid.Column="3"
+      Command="{Binding Path=DisplayArchivesCommand}"
+      Content="Archive Notams"
+      HorizontalAlignment="Left"
+      Margin="0,2,54,2" 
+      MinWidth="70" Width="Auto" Height="Auto" Grid.ColumnSpan="3" />
+        <Button 
+      Grid.Row="5" Grid.Column="5"
+      Command="{Binding Path=PrintCommand}"
+      Content="Print"
+      HorizontalAlignment="Left"
+      Margin="0,2,31,2" 
+      MinWidth="70" Width="Auto" Height="Auto" Grid.ColumnSpan="2" />
+        <Button 
+      Grid.Row="5" Grid.Column="4"
+      Command="{Binding Path=BlancCommand}"
+      Content="Blanc NOTAMS"
+      HorizontalAlignment="Left"
+      Margin="0,2,31,2" 
+      MinWidth="70" Width="Auto" Height="Auto" Grid.ColumnSpan="2" />
+        <Button 
+      Grid.Row="5" Grid.Column="6"
+      Command="{Binding Path=GAPCommand}"
+      Content="GAP Analysis"
+      HorizontalAlignment="Left"
+      Margin="0,2,31,2" 
+      MinWidth="70" Width="Auto" Height="Auto" Grid.ColumnSpan="2" />
+        <TextBox 
+      x:Name="PreviewTxt"
+      Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="6" AcceptsReturn="True" MaxLines="20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+      Text="{Binding Path=ReportResult, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <TextBox 
+      x:Name="GAPTxt"
+      Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="1" AcceptsReturn="True" MaxLines="20" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
+      Text="{Binding Path=ImportedListText, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+        <ProgressBar Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="6" Minimum="0" Maximum="100" Value="{Binding Path=ProgressVal}" Visibility="Hidden"/>
+
+    </Grid>
+</UserControl>

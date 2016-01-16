@@ -1,0 +1,504 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AllNotamsViewModel.cs" caret="843" fromTop="6" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:NotamViewModel.cs" caret="21749" fromTop="12" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:AllNotamsView.xaml" caret="4380" fromTop="10" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/f:RelayCommand.cs" caret="347" fromTop="12" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AerodomViewModel.cs" caret="310" fromTop="11" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:MainWindowViewModel .cs" caret="6262" fromTop="14" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AllOriginsViewModel.cs" caret="1301" fromTop="12" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:Commands.cs" caret="2447" fromTop="12" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:WorkSpaceViewModel.cs" caret="1672" fromTop="1" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:AllOriginsView.xaml" caret="3142" fromTop="13" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AuthenticationViewModel.cs" caret="4584" fromTop="8" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:NotamCodesService.cs" caret="3233" fromTop="7" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:NotamDataContext.cs" caret="275" fromTop="0" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:CodeBase.cs" caret="193" fromTop="7" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Aftn.cs" caret="723" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamCode.cs" caret="741" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Country.cs" caret="735" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:FIR.cs" caret="773" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamDetail.cs" caret="879" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Snowtam.cs" caret="818" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:User.cs" caret="843" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Notam.cs" caret="1196" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Aerodom.cs" caret="1134" fromTop="11" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:OriginViewModel.cs" caret="1849" fromTop="11" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:ViewModelBase.cs" caret="2500" fromTop="10" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:OriginService.cs" caret="2120" fromTop="12" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Origin.cs" caret="1690" fromTop="17" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamBase.cs" caret="1019" fromTop="11" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/f:App.config" caret="378" fromTop="7" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:NotamService.cs" caret="16462" fromTop="9" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AllOriginsViewModel.cs" caret="1955" fromTop="16" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AllOriginsViewModel.cs" caret="689" fromTop="6" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:MainWindowViewModel .cs" caret="7456" fromTop="10" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:AllOriginsViewModel.cs" caret="1063" fromTop="14" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:WorkSpaceViewModel.cs" caret="2206" fromTop="15" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:WorkSpaceViewModel.cs" caret="1808" fromTop="3" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:WorkSpaceViewModel.cs" caret="1982" fromTop="7" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:OriginViewModel.cs" caret="7456" fromTop="12" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:Commands.cs" caret="2437" fromTop="18" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:Commands.cs" caret="1735" fromTop="18" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:Commands.cs" caret="2054" fromTop="16" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:View/f:AllOriginsView.xaml" caret="3002" fromTop="10" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/d:ViewModel/f:OriginViewModel.cs" caret="3376" fromTop="3" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:OriginService.cs" caret="2118" fromTop="16" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:OriginService.cs" caret="2204" fromTop="12" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/f:OriginService.cs" caret="2123" fromTop="9" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamBase.cs" caret="576" fromTop="10" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Origin.cs" caret="310" fromTop="12" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Aftn.cs" caret="723" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamCode.cs" caret="741" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Country.cs" caret="735" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:FIR.cs" caret="773" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Snowtam.cs" caret="812" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:User.cs" caret="837" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:NotamDetail.cs" caret="879" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Notam.cs" caret="1196" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Aerodom.cs" caret="1134" fromTop="11" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Origin.cs" caret="1442" fromTop="12" />
+      <File id="4488D142-D19D-4453-BB4B-D933E454CA4E/d:Model/f:Origin.cs" caret="1685" fromTop="4" />
+      <File id="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26/f:App.config" caret="175" fromTop="3" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="Object`0" priority="0" />
+      <Item value="public" priority="20" />
+      <Item value="int" priority="0" />
+      <Item value="NotamBase`0" priority="1" />
+      <Item value="string" priority="18" />
+      <Item value="CodeBase`0" priority="1" />
+      <Item value="new" priority="14" />
+      <Item value="var" priority="11" />
+      <Item value="_dataDC" priority="2" />
+      <Item value="SERVICE" priority="1" />
+      <Item value="InheritanceAttribute`0" priority="0" />
+      <Item value="InheritanceLevel`0" priority="0" />
+      <Item value="abstract" priority="0" />
+      <Item value="override" priority="4" />
+      <Item value="dataContext" priority="8" />
+      <Item value="return" priority="18" />
+      <Item value="DataContext`0" priority="0" />
+      <Item value="if" priority="25" />
+      <Item value="foreach" priority="1" />
+      <Item value="in" priority="1" />
+      <Item value="Origin`0" priority="7" />
+      <Item value="null" priority="6" />
+      <Item value="result" priority="6" />
+      <Item value="List&lt;Origin&gt;" priority="0" />
+      <Item value="NotamDataContext`0" priority="0" />
+      <Item value="EntityAddedEventArgs" priority="0" />
+      <Item value="_originService" priority="5" />
+      <Item value="originService" priority="1" />
+      <Item value="a" priority="0" />
+      <Item value="_dataContext" priority="5" />
+      <Item value="else" priority="6" />
+      <Item value="origin" priority="3" />
+      <Item value="FIRs" priority="0" />
+      <Item value="FIR`0" priority="7" />
+      <Item value="_Origin" priority="0" />
+      <Item value="_FIRs" priority="0" />
+      <Item value="WorkspaceViewModel`0" priority="1" />
+      <Item value="_firService" priority="1" />
+      <Item value="FIRService" priority="0" />
+      <Item value="private" priority="5" />
+      <Item value="value" priority="5" />
+      <Item value="_fir" priority="0" />
+      <Item value="_origin" priority="0" />
+      <Item value="List" priority="1" />
+      <Item value="OriginService`0" priority="0" />
+      <Item value="base" priority="2" />
+      <Item value="Code" priority="0" />
+      <Item value="Notam`0" priority="10" />
+      <Item value="NotamCode`0" priority="6" />
+      <Item value="NotamCode" priority="1" />
+      <Item value="NOTAM" priority="3" />
+      <Item value="FIRService`0" priority="0" />
+      <Item value="NotamService`0" priority="1" />
+      <Item value="Model" priority="0" />
+      <Item value="_notamService" priority="3" />
+      <Item value="NotamService" priority="0" />
+      <Item value="Subject" priority="1" />
+      <Item value="Condition" priority="1" />
+      <Item value="OnPropertyChanged`0" priority="1" />
+      <Item value="_localizeCommand" priority="0" />
+      <Item value="_notam" priority="5" />
+      <Item value="Type`0" priority="1" />
+      <Item value="this" priority="6" />
+      <Item value="DateTime`0" priority="2" />
+      <Item value="OriginOptions" priority="0" />
+      <Item value="FirOptions" priority="0" />
+      <Item value="FromDate" priority="4" />
+      <Item value="DateTime" priority="0" />
+      <Item value="UserControl`0" priority="0" />
+      <Item value="newAerodom" priority="0" />
+      <Item value="readonly" priority="1" />
+      <Item value="AerodomService`0" priority="0" />
+      <Item value="AerodomService" priority="0" />
+      <Item value="Border`0" priority="0" />
+      <Item value="NotamType" priority="2" />
+      <Item value="bool" priority="3" />
+      <Item value="true" priority="4" />
+      <Item value="false" priority="3" />
+      <Item value="String`0" priority="3" />
+      <Item value="_Notams" priority="0" />
+      <Item value="n" priority="2" />
+      <Item value="RefNum" priority="0" />
+      <Item value="LostFocusEventManager`0" priority="0" />
+      <Item value="delegate" priority="0" />
+      <Item value="GetByNumber`0" priority="1" />
+      <Item value="NotamNum" priority="0" />
+      <Item value="refrenceNotam" priority="4" />
+      <Item value="Type" priority="0" />
+      <Item value="Filling" priority="1" />
+      <Item value="Origin" priority="0" />
+      <Item value="UpperLimit" priority="0" />
+      <Item value="LowerLimit" priority="0" />
+      <Item value="ToDate" priority="0" />
+      <Item value="DFreeText" priority="0" />
+      <Item value="efreeText" priority="0" />
+      <Item value="Year" priority="0" />
+      <Item value="FirAero" priority="0" />
+      <Item value="PermEst" priority="1" />
+      <Item value="Latitude" priority="0" />
+      <Item value="Longtitude" priority="0" />
+      <Item value="Radius" priority="0" />
+      <Item value="NotamFilter`0" priority="1" />
+      <Item value="notamFilter" priority="1" />
+      <Item value="notamfilter" priority="3" />
+      <Item value="TypeFilter" priority="0" />
+      <Item value="NumberFilter" priority="0" />
+      <Item value="YearFilter" priority="1" />
+      <Item value="NotamCodeFilter" priority="0" />
+      <Item value="Reload" priority="0" />
+      <Item value="workspace" priority="0" />
+      <Item value="i" priority="4" />
+      <Item value="Parent" priority="0" />
+      <Item value="notamService" priority="0" />
+      <Item value="parent" priority="0" />
+      <Item value="parentWorkSpaces" priority="1" />
+      <Item value="ParentWorkspaces" priority="0" />
+      <Item value="void" priority="1" />
+      <Item value="notamDetailService" priority="0" />
+      <Item value="NotamDetail" priority="0" />
+      <Item value="notam" priority="2" />
+      <Item value="List&lt;NotamCode&gt;" priority="0" />
+      <Item value="EFreeText" priority="1" />
+      <Item value="AdornedElementPlaceholder`0" priority="0" />
+      <Item value="IsEEnabled" priority="0" />
+      <Item value="Environment`0" priority="0" />
+      <Item value="FilePath" priority="0" />
+      <Item value="SnowtamService`0" priority="0" />
+      <Item value="SnowtamService" priority="0" />
+      <Item value="_notamText" priority="0" />
+      <Item value="IView`0" priority="0" />
+      <Item value="IsAuthenticated" priority="0" />
+      <Item value="Int16`0" priority="0" />
+      <Item value="_users" priority="0" />
+      <Item value="enum" priority="0" />
+      <Item value="UserRole`0" priority="5" />
+      <Item value="role" priority="1" />
+      <Item value="Role" priority="1" />
+      <Item value="try" priority="1" />
+      <Item value="catch" priority="0" />
+      <Item value="test`0" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="ex" priority="0" />
+      <Item value="Roles" priority="0" />
+      <Item value="AuthenticationService`0" priority="0" />
+      <Item value="Boolean`0" priority="0" />
+      <Item value="IFormatProvider`0" priority="0" />
+      <Item value="_user" priority="1" />
+      <Item value="CheckBox`0" priority="0" />
+      <Item value="user" priority="1" />
+      <Item value="_authService" priority="1" />
+      <Item value="AuthenticationService" priority="0" />
+      <Item value="User`0" priority="0" />
+      <Item value="ErrorMessage" priority="0" />
+      <Item value="Password" priority="0" />
+      <Item value="PasswordError" priority="0" />
+      <Item value="IsAdmin" priority="0" />
+      <Item value="Label`0" priority="1" />
+      <Item value="pv" priority="0" />
+      <Item value="static" priority="0" />
+      <Item value="_passwordError" priority="0" />
+      <Item value="PasswordValidator" priority="0" />
+      <Item value="protected" priority="0" />
+      <Item value="virtual" priority="0" />
+      <Item value="Workspaces" priority="0" />
+      <Item value="OriginViewModel`0" priority="1" />
+      <Item value="SelectedItem" priority="1" />
+      <Item value="object" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="_origins" priority="0" />
+      <Item value="item" priority="1" />
+      <Item value="updated" priority="1" />
+      <Item value="Update`0" priority="0" />
+      <Item value="PropertyChanged" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.DA.NotamDataClassesDataContext">
+      <Item value="NTM_FIRs" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Specialized.NameValueCollection">
+      <Item value="Get`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Configuration.ConfigurationManager">
+      <Item value="ConnectionStrings" priority="1" />
+      <Item value="AppSettings" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IList`1">
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="AddRange`0" priority="0" />
+      <Item value="Where`1" priority="2" />
+      <Item value="Find`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.ViewModel.AllOriginsViewModel">
+      <Item value="AllOrigins" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.EntityAddedEventArgs`1">
+      <Item value="NewEntity" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.ListView">
+      <Item value="Name" priority="0" />
+      <Item value="DataContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.Service.Origin">
+      <Item value="Name" priority="1" />
+      <Item value="Code" priority="2" />
+      <Item value="_FIRs" priority="1" />
+      <Item value="FIRs" priority="0" />
+      <Item value="Equals`0" priority="1" />
+      <Item value="Id" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.OriginService">
+      <Item value="Update`0" priority="0" />
+      <Item value="Insert`0" priority="0" />
+      <Item value="GetOrigins`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.NotamDataContext">
+      <Item value="Origins" priority="0" />
+      <Item value="SubmitChanges`0" priority="0" />
+      <Item value="FIRs" priority="0" />
+      <Item value="Notams" priority="1" />
+      <Item value="NotamDetails" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="InsertOnSubmit`0" priority="0" />
+      <Item value="Where`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.Service.FIR">
+      <Item value="_Origin" priority="0" />
+      <Item value="_Origin_Id" priority="0" />
+      <Item value="Origin" priority="3" />
+      <Item value="AtcCode" priority="0" />
+      <Item value="NorthLimit" priority="0" />
+      <Item value="SouthLimit" priority="0" />
+      <Item value="WestLimit" priority="0" />
+      <Item value="EastLimit" priority="0" />
+      <Item value="Code" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.Service.FIR">
+      <Item value="CreateNewFIR`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.FIRService">
+      <Item value="GetAllOrigins`0" priority="0" />
+      <Item value="GetFIRs`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.Service.CodeBase">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="5" />
+      <Item value="Empty" priority="4" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.Model.Notam">
+      <Item value="NotamCode" priority="12" />
+      <Item value="FIR" priority="3" />
+      <Item value="Id" priority="2" />
+      <Item value="SendTime" priority="2" />
+      <Item value="Type" priority="5" />
+      <Item value="Number" priority="5" />
+      <Item value="Year" priority="3" />
+      <Item value="LowerLimit" priority="3" />
+      <Item value="HigherLimit" priority="1" />
+      <Item value="Latitude" priority="3" />
+      <Item value="Longtitude" priority="3" />
+      <Item value="Radius" priority="3" />
+      <Item value="FirAero" priority="3" />
+      <Item value="FirA2" priority="1" />
+      <Item value="FromDate" priority="3" />
+      <Item value="ToDate" priority="2" />
+      <Item value="PermEst" priority="2" />
+      <Item value="DFreeText" priority="3" />
+      <Item value="RefType" priority="0" />
+      <Item value="NotamType" priority="0" />
+      <Item value="Origin" priority="0" />
+      <Item value="EFreeText" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.NotamCodeService">
+      <Item value="GetNotamCodes`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.NotamService">
+      <Item value="GetAllFIRs`0" priority="0" />
+      <Item value="GetByNumber`0" priority="0" />
+      <Item value="GetFilterNotams`0" priority="0" />
+      <Item value="_dataContext" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.Service.NotamCode">
+      <Item value="Traffic" priority="1" />
+      <Item value="Purpose" priority="1" />
+      <Item value="Scope" priority="1" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="Subject" priority="1" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="Condition" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.ViewModel.MainWindowViewModel">
+      <Item value="ShowAllFIRs`0" priority="0" />
+      <Item value="CreateNewNotamCode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.ViewModel.NotamViewModel">
+      <Item value="Filling" priority="0" />
+      <Item value="Localize`0" priority="0" />
+      <Item value="Origin" priority="0" />
+      <Item value="FIR" priority="0" />
+      <Item value="FromDate" priority="0" />
+      <Item value="Year" priority="0" />
+      <Item value="IsNewNotam" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Equals`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="FirstOrDefault`1" priority="2" />
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Parse`0" priority="0" />
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.Service.Aerodom">
+      <Item value="CreateNewAerodom`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.Properties.Entity">
+      <Item value="MainWindowViewModel_Command_ViewAllFIRs" priority="0" />
+      <Item value="MainWindowViewModel_Command_ViewAllAerodoms" priority="0" />
+      <Item value="MainWindowViewModel_Command_ViewAllNotamCodes" priority="0" />
+      <Item value="MainWindowViewModel_Command_NewNotamCode" priority="0" />
+      <Item value="AllNotamCodesViewModel_DisplayName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Visibility">
+      <Item value="Visible" priority="0" />
+      <Item value="Hidden" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Data.BindingExpression">
+      <Item value="UpdateSource`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.NotamFilter">
+      <Item value="TypeFilter" priority="1" />
+      <Item value="NumberFilter" priority="0" />
+      <Item value="YearFilter" priority="0" />
+      <Item value="NotamCodeFilter" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Where`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.ObjectModel.ObservableCollection`1">
+      <Item value="CollectionChanged" priority="0" />
+      <Item value="Where`1" priority="0" />
+      <Item value="Clear`0" priority="1" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.ViewModel.AllNotamsViewModel">
+      <Item value="AllNotams" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.Model.NotamDetail">
+      <Item value="Notam" priority="1" />
+      <Item value="Description" priority="0" />
+      <Item value="FileUrl" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.SERVICE.Model.NotamDetail">
+      <Item value="CreateNewNotamDetail`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.NotamDetailService">
+      <Item value="GetByNotamId`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Environment">
+      <Item value="NewLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.SERVICE.Model.Snowtam">
+      <Item value="CreateNewSnowtam`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.UserDataContext">
+      <Item value="Users" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.AuthenticationService">
+      <Item value="UserAdded" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.User">
+      <Item value="Password" priority="6" />
+      <Item value="Username" priority="4" />
+      <Item value="Role" priority="2" />
+      <Item value="HashPassword" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NOTAM.SERVICE.UserRole">
+      <Item value="Anonymous" priority="0" />
+      <Item value="Administrator" priority="3" />
+      <Item value="User" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.SERVICE.UserRole">
+      <Item value="Equals`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.MessageBox">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Boolean">
+      <Item value="Equals`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.CheckBox">
+      <Item value="IsChecked" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Media.Colors">
+      <Item value="Yellow" priority="0" />
+      <Item value="Red" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NOTAM.Behavior.PasswordValidator">
+      <Item value="ErrorMsg" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.Label">
+      <Item value="Content" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

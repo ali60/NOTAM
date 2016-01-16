@@ -1,0 +1,147 @@
+﻿<UserControl x:Class="NOTAM.View.AllNotamCodesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase" xmlns:clr="clr-namespace:NOTAM.View" mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="NotamCodesData"  Source="{Binding Path=AllNotamCodes}">
+
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Code" Direction="Descending" />
+                <scm:SortDescription PropertyName="Name" Direction="Ascending" />
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+
+        <GroupStyle x:Key="NotamCodeGroupStyle">
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock 
+            x:Name="txt" 
+            Background="{StaticResource Brush_HeaderBackground}"
+            FontWeight="Bold"
+            Foreground="White"
+            Margin="1"
+            Padding="4,2,0,2"           
+            />
+                    <DataTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Path=Name}" Value="True">
+                            <Setter TargetName="txt" Property="Text" Value="Companies" />
+                        </DataTrigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+
+        <Style x:Key="NotamCodeItemStyle" TargetType="{x:Type ListViewItem}">
+            <!-- 
+      Stretch the content of each cell so that we can 
+      right-align text in the Total Sales column. 
+      -->
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <!-- 
+      Bind the IsSelected property of a ListViewItem to the 
+      IsSelected property of a CustomerViewModel object.
+      -->
+            <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}" />
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="ItemsControl.AlternationIndex" Value="1" />
+                        <Condition Property="IsSelected" Value="False" />
+                        <Condition Property="IsMouseOver" Value="False" />
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="#EEEEEEEE" />
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="80" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox DockPanel.Dock="Top" Grid.Column="0" Grid.Row="0" Margin="0,0,0,10" Name="txtSubjectFilter" Text="{Binding Path=SubjectFilter}" ToolTip="Subject"/>
+            <TextBox DockPanel.Dock="Top" Grid.Column="1" Grid.Row="0" Margin="0,0,0,10" Name="txtDescriptionFilter" Text="{Binding Path=SubjectDescFilter}" ToolTip="Description" />
+            <TextBox DockPanel.Dock="Top" Grid.Column="2" Grid.Row="0"   Margin="0,0,0,10" Name="txtConditionFilter" Text="{Binding Path=ConditionFilter}" ToolTip="Condition"  />
+            <TextBox DockPanel.Dock="Top" Grid.Column="3" Grid.Row="0" Margin="0,0,0,10" Name="txtConditionDescFilter" Text="{Binding Path=ConditionDescFilter}" ToolTip="Condition Description"/>
+
+            <ListView Grid.Row="1" Grid.ColumnSpan="8" Name="NotamListView"
+      AlternationCount="2" 
+      DataContext="{StaticResource NotamCodesData}" 
+      ItemContainerStyle="{StaticResource NotamCodeItemStyle}"
+      ItemsSource="{Binding}" 
+      clr:Commands.ListViewDoubleClickCommand="{Binding HandleDoubleClick}"
+      >
+            <ListView.GroupStyle>
+                <StaticResourceExtension 
+          ResourceKey="NotamCodeGroupStyle" 
+          />
+            </ListView.GroupStyle>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn 
+            Header="Subject" 
+            DisplayMemberBinding="{Binding Path=Subject}" 
+            />
+                    <GridViewColumn 
+            Header="Description" 
+            DisplayMemberBinding="{Binding Path=Subject_Desc}" 
+            />
+                    <GridViewColumn 
+            Header="Condition" 
+            DisplayMemberBinding="{Binding Path=Condition}" 
+            />
+                    <GridViewColumn 
+            Header="Description" 
+            DisplayMemberBinding="{Binding Path=Condition_Desc}" 
+            />
+
+                    <GridViewColumn 
+            Header="Scope" 
+            DisplayMemberBinding="{Binding Path=Scope}" 
+            />
+
+                    <GridViewColumn 
+            Header="Category" 
+            DisplayMemberBinding="{Binding Path=Category}" 
+            />
+                    <GridViewColumn 
+            Header="Traffic" 
+            DisplayMemberBinding="{Binding Path=Traffic}" 
+            />
+                    <GridViewColumn 
+            Header="Purpose" 
+            DisplayMemberBinding="{Binding Path=Purpose}" 
+            />
+
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button    
+                                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                    Content="Delete"
+                                    Margin="0"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=DeleteCommand}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+            </ListView.View>
+        </ListView>
+        </Grid>
+    </DockPanel>
+</UserControl>

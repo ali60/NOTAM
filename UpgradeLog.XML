@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="NOTAM">
+</Property><Property Name="Solution File" Value="D:\VC\NOTAM\NOTAM.sln">
+</Property><Property Name="User Options File" Value="D:\VC\NOTAM\NOTAM.suo">
+</Property><Property Name="Date" Value="Monday, 15 December 2014">
+</Property><Property Name="Time" Value="23:53 PM">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="NOTAM.sln" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.sln">
+</Event><Event ErrorLevel="0" Project="" Source="NOTAM.suo" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.suo">
+</Event><Event ErrorLevel="2" Project="NOTAM.UI" Source="NOTAM\NOTAM.UI.csproj" Description="Unable to parse project file: D:\VC\NOTAM\NOTAM\NOTAM.UI.csproj">
+</Event><Event ErrorLevel="3" Project="NOTAM.UI" Source="NOTAM\NOTAM.UI.csproj" Description="Not Converted">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NOTAM.SERVICE.csproj" Description="Project file successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\NOTAM.SERVICE.csproj">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\AerodomService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\AerodomService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\AftnService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\AftnService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\AuthenticationService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\AuthenticationService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\CountryService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\CountryService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\EntityAddedEventArgs.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\EntityAddedEventArgs.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Filter\NotamCodesFilter.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Filter\NotamCodesFilter.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Filter\NotamFilter.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Filter\NotamFilter.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\FIRService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\FIRService.cs">
+</Event><Event ErrorLevel="2" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\IntlNotamService.cs" Description="Failed to backup file as D:\VC\NOTAM\Backup\NOTAM.SERVICE\IntlNotamService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Aerodom.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Aerodom.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Aftn.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Aftn.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\AnonymousIdentity.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\AnonymousIdentity.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\CodeBase.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\CodeBase.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Country.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Country.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\CustomIdentity.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\CustomIdentity.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\CustomPrincipal.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\CustomPrincipal.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\FIR.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\FIR.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\IntlNotam.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\IntlNotam.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Notam.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Notam.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\NotamArchive.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\NotamArchive.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\NotamBase.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\NotamBase.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\NotamCode.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\NotamCode.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\NotamConstant.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\NotamConstant.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\NotamDetail.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\NotamDetail.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Origin.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Origin.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\Snowtam.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\Snowtam.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\SnowtamDetail.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\SnowtamDetail.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Model\User.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Model\User.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NotamCodesService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\NotamCodesService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NotamDataContext.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\NotamDataContext.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NotamDetailService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\NotamDetailService.cs">
+</Event><Event ErrorLevel="2" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NotamService.cs" Description="Failed to backup file as D:\VC\NOTAM\Backup\NOTAM.SERVICE\NotamService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\OriginService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\OriginService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\Settings.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\Settings.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\SnowtamDetailService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\SnowtamDetailService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\SnowtamService.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\SnowtamService.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\UserDataContext.cs" Description="File successfully backed up as D:\VC\NOTAM\Backup\NOTAM.SERVICE\UserDataContext.cs">
+</Event><Event ErrorLevel="0" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NOTAM.SERVICE.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="NOTAM.SERVICE" Source="NOTAM.SERVICE\NOTAM.SERVICE.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="NotamSetup.vdproj" Source="NotamSetup\NotamSetup.vdproj" Description="Project file successfully backed up as D:\VC\NOTAM\Backup\NotamSetup\NotamSetup.vdproj">
+</Event><Event ErrorLevel="2" Project="NotamSetup.vdproj" Source="NotamSetup\NotamSetup.vdproj" Description="Unable to open project 'D:\VC\NOTAM\NotamSetup\NotamSetup.vdproj'.&#xA;An error was found on line #1.">
+</Event><Event ErrorLevel="3" Project="NotamSetup.vdproj" Source="NotamSetup\NotamSetup.vdproj" Description="Not Converted">
+</Event><Event ErrorLevel="0" Project="" Source="NOTAM.sln" Description="The solution file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="" Source="NOTAM.sln" Description="No Conversion Required">
+</Event></UpgradeLog>

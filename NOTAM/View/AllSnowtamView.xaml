@@ -1,0 +1,128 @@
+﻿<UserControl x:Class="NOTAM.View.AllSnowtamView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase" xmlns:local="clr-namespace:System.Data;assembly=System.Data" xmlns:clr="clr-namespace:NOTAM.View" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="NotamsData"  Source="{Binding Path=AllSnowtams}">
+        </CollectionViewSource>
+
+        <GroupStyle x:Key="NotamGroupStyle">
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock 
+            x:Name="txt" 
+            Background="{StaticResource Brush_HeaderBackground}"
+            FontWeight="Bold"
+            Foreground="White"
+            Margin="1"
+            Padding="4,2,0,2"           
+            />
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+
+        <Style x:Key="NotamItemStyle" TargetType="{x:Type ListViewItem}">
+            <!-- 
+      Stretch the content of each cell so that we can 
+      right-align text in the Total Sales column. 
+      -->
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+
+
+
+            <!-- 
+      Bind the IsSelected property of a ListViewItem to the 
+      IsSelected property of a CustomerViewModel object.
+      -->
+
+            <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}" />
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="ItemsControl.AlternationIndex" Value="1" />
+                        <Condition Property="IsSelected" Value="False" />
+                        <Condition Property="IsMouseOver" Value="False" />
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="#EEEEEEEE" />
+                </MultiTrigger>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.ToolTip" Value="{Binding Path=ArchiveReason}"/>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid  Grid.Row="0" Grid.Column="5" >
+                <Button DockPanel.Dock="Top"  HorizontalAlignment="Left" Command="{Binding Path=ReportCommand}" Margin="0,0,0,10" Content="Report" />
+            </Grid>
+
+
+            <ListView Grid.Row="1" Grid.ColumnSpan="5"
+      AlternationCount="2" 
+      DataContext="{StaticResource NotamsData}" 
+      ItemContainerStyle="{StaticResource NotamItemStyle}"
+      ItemsSource="{Binding}"
+                  clr:Commands.ListViewDoubleClickCommand="{Binding HandleDoubleClick}"
+      >
+                <ListView.GroupStyle>
+                    <StaticResourceExtension 
+          ResourceKey="NotamGroupStyle" 
+          />
+                </ListView.GroupStyle>
+
+                <ListView.View>
+
+                    <GridView>
+
+                        <GridViewColumn 
+            Header="Number" 
+            DisplayMemberBinding="{Binding Path=SnowtamNum}" 
+            />
+            <GridViewColumn 
+            Header="Aero" 
+            DisplayMemberBinding="{Binding Path=Aerodome}" 
+            />
+                        <GridViewColumn 
+            Header="Date" 
+            DisplayMemberBinding="{Binding Path=DateTimeT}" 
+            />
+
+
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button    
+                                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                    Content="Details"
+                                    Margin="0"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=DetailCommand}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</UserControl>

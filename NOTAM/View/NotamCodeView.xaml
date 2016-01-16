@@ -1,0 +1,175 @@
+<UserControl x:Class="NOTAM.View.NotamCodeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+          <Grid Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+            <Grid.Resources>
+                <DataTemplate DataType="{x:Type ValidationError}">
+                    <TextBlock 
+          FontStyle="Italic"
+          Foreground="Red"
+          HorizontalAlignment="Left"
+          Margin="0,1"
+          Text="{Binding Path=ErrorContent}" 
+          />
+                </DataTemplate>
+            </Grid.Resources>
+
+            <!-- Filling -->
+            <Label 
+      Grid.Row="0" Grid.Column="0" 
+      Content="Subject" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=subjectTxt}" 
+      />
+            <TextBox 
+      x:Name="subjectTxt"
+      Grid.Row="0" Grid.Column="1" 
+      Text="{Binding Path=Subject, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+
+        <Label 
+      Grid.Row="0" Grid.Column="2" 
+      Content="Description" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=subjectDescTxt}" 
+      />
+
+        <TextBox 
+      x:Name="subjectDescTxt" CharacterCasing="Normal"
+      Grid.Row="0" Grid.Column="3" 
+      Text="{Binding Path=Subject_Desc, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+      Validation.ErrorTemplate="{x:Null}"
+      />
+
+
+
+        <!-- Condition-->
+            <Label 
+      Grid.Row="2" Grid.Column="0" 
+      Content="Condition:" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=conditionTxt}"
+      />
+            <TextBox 
+      x:Name="conditionTxt"
+      Grid.Row="2" Grid.Column="1" 
+       Text="{Binding Path=Condition, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}"   />
+
+
+        <Label 
+      Grid.Row="2" Grid.Column="2" 
+      Content="Description" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=conditionDescTxt}" 
+      />
+
+        <TextBox 
+      x:Name="conditionDescTxt"  CharacterCasing="Normal"
+      Grid.Row="2" Grid.Column="3" 
+       Text="{Binding Path=Condition_Desc, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}"  />
+
+       
+            <Label 
+      Grid.Row="4" Grid.Column="0" 
+      Content="Scope:" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=scopeTxt}"
+      />
+            <TextBox 
+      x:Name="scopeTxt"
+      Grid.Row="4" Grid.Column="1" 
+       Text="{Binding Path=Scope, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}" />
+
+
+        <Label 
+      Grid.Row="4" Grid.Column="2" 
+      Content="Category:" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=categoryTxt}"
+      />
+        <TextBox 
+      x:Name="categoryTxt"
+      Grid.Row="4" Grid.Column="3" 
+       Text="{Binding Path=Category, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}" />
+
+
+        <Label 
+      Grid.Row="6" Grid.Column="0" 
+      Content="Traffic:" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=trafficTxt}"
+      />
+        <TextBox 
+      x:Name="trafficTxt"
+      Grid.Row="6" Grid.Column="1" 
+       Text="{Binding Path=Traffic, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}" />
+
+
+        <Label 
+      Grid.Row="6" Grid.Column="2" 
+      Content="Purpose:" 
+      HorizontalAlignment="Left"
+      Target="{Binding ElementName=purposeTxt}"
+      />
+        <TextBox 
+      x:Name="purposeTxt"
+      Grid.Row="6" Grid.Column="3" 
+       Text="{Binding Path=Purpose, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}" 
+       Validation.ErrorTemplate="{x:Null}"  />
+
+
+
+
+
+
+
+
+
+
+       
+            <!-- SAVE BUTTON -->
+            <Button 
+      Grid.Row="8" Grid.Column="3"
+      Command="{Binding Path=SaveCommand}"
+      Content="_Save"
+      HorizontalAlignment="Left"
+      Margin="4,2" 
+      MinWidth="60" 
+      />
+        </Grid>
+
+    
+</UserControl>

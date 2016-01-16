@@ -1,0 +1,224 @@
+﻿<UserControl x:Class="NOTAM.View.AllIntlNotamsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase" xmlns:local="clr-namespace:System.Data;assembly=System.Data" xmlns:clr="clr-namespace:NOTAM.View" xmlns:Behavior="clr-namespace:NOTAM.Behavior">
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="brushWatermarkBackground" Color="White" />
+        <SolidColorBrush x:Key="brushWatermarkForeground" Color="LightGray"  />
+
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <Behavior:TextInputToVisibilityConverter x:Key="TextInputToVisibilityConverter" />
+        <CollectionViewSource x:Key="NotamsData"  Source="{Binding Path=AllNotams}">
+        </CollectionViewSource>
+
+        <GroupStyle x:Key="NotamGroupStyle">
+            <GroupStyle.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock 
+            x:Name="txt" 
+            Background="{StaticResource Brush_HeaderBackground}"
+            FontWeight="Bold"
+            Foreground="White"
+            Margin="1"
+            Padding="4,2,0,2"           
+            />
+                </DataTemplate>
+            </GroupStyle.HeaderTemplate>
+        </GroupStyle>
+
+        <Style x:Key="NotamItemStyle" TargetType="{x:Type ListViewItem}">
+            <!-- 
+      Stretch the content of each cell so that we can 
+      right-align text in the Total Sales column. 
+      -->
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+
+
+
+
+            <!-- 
+      Bind the IsSelected property of a ListViewItem to the 
+      IsSelected property of a CustomerViewModel object.
+      -->
+
+            <Setter Property="IsSelected" Value="{Binding Path=IsSelected, Mode=TwoWay}" />
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="ItemsControl.AlternationIndex" Value="1" />
+                        <Condition Property="IsSelected" Value="False" />
+                        <Condition Property="IsMouseOver" Value="False" />
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Background" Value="#EEEEEEEE" />
+                </MultiTrigger>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.ToolTip" Value="{Binding Path=ArchiveReason}"/>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="35" />
+                <ColumnDefinition Width="65" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="70" />
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--<TextBox DockPanel.Dock="Top" Grid.Column="0" Grid.Row="0"   Margin="0,0,0,10" Name="txtTypeFilter" Text="{Binding Path=TypeFilter}" ToolTip="Type"  />
+            <TextBox DockPanel.Dock="Top" Grid.Column="1" Grid.Row="0" Margin="0,0,0,10" Name="txtNumberFilter" Text="{Binding Path=NumberFilter}" ToolTip="Number"/>
+            <TextBox DockPanel.Dock="Top" Grid.Column="2" Grid.Row="0" Margin="0,0,0,10" Name="txtYearFilter" Text="{Binding Path=YearFilter}" ToolTip="Year" />
+            <TextBox DockPanel.Dock="Top" Grid.Column="3" Grid.Row="0" Margin="0,0,0,10" Name="txtQCodeFilter" Text="{Binding Path=NotamCodeFilter}" ToolTip="QCode"/>
+            <TextBox DockPanel.Dock="Top" Grid.Column="4" Grid.Row="0" Margin="0,0,0,10" Name="txtAeroFilter" Text="{Binding Path=NotamAeroFilter}" ToolTip="FIR/Aero"/>
+            <TextBox DockPanel.Dock="Top" Grid.Column="5" Grid.Row="0" Margin="0,0,0,10" Name="txtItemE" Text="{Binding Path=ItemEFilter}" ToolTip="Item E"/>-->
+            <Grid  Grid.Row="0" Grid.Column="0" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="Type"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin" 
+                       Visibility="{Binding ElementName=txtTypeFilter, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtTypeFilter" Text="{Binding Path=TypeFilter}" ToolTip="Type"    />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="1" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="Number"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin" 
+                       Visibility="{Binding ElementName=txtNumberFilter, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtNumberFilter"  Text="{Binding Path=NumberFilter}" ToolTip="Number"   />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="2" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="Year"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin" 
+                       Visibility="{Binding ElementName=txtYearFilter, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtYearFilter" Text="{Binding Path=YearFilter}" ToolTip="Year"  />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="3" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="QCode"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin" 
+                       Visibility="{Binding ElementName=txtQCodeFilter, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtQCodeFilter" Text="{Binding Path=NotamCodeFilter}" ToolTip="QCode" />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="4" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="FIR/Aero"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin" 
+                       Visibility="{Binding ElementName=txtAeroFilter, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtAeroFilter" Text="{Binding Path=NotamAeroFilter}" ToolTip="FIR/Aero" />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="5" Background="{StaticResource brushWatermarkBackground}"  >
+                <TextBlock DockPanel.Dock="Top" Margin="0,0,0,10"  Text="Item E"  Foreground="{StaticResource brushWatermarkForeground}"  FontWeight="Thin"
+                       Visibility="{Binding ElementName=txtItemE, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                <TextBox DockPanel.Dock="Top" Margin="0,0,0,10" Background="Transparent" Name="txtItemE" Text="{Binding Path=ItemEFilter}" ToolTip="Item E"   />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="6" Background="{StaticResource brushWatermarkBackground}"  >
+                <Button DockPanel.Dock="Top" Width="60" HorizontalAlignment="Left" Command="{Binding Path=RefreshCommand}" Margin="0,0,0,10" Content="Refresh" />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="7" Background="{StaticResource brushWatermarkBackground}"  >
+                <Button DockPanel.Dock="Top"  HorizontalAlignment="Left" Command="{Binding Path=StatisticsCommand}" Margin="0,0,0,10" Content="Statistics" />
+            </Grid>
+            <Grid  Grid.Row="0" Grid.Column="8" Background="{StaticResource brushWatermarkBackground}"  >
+                <Button DockPanel.Dock="Top"  HorizontalAlignment="Left" Command="{Binding Path=ReportCommand}" Margin="0,0,0,10" Content="Report" />
+            </Grid>
+            <ListView Grid.Row="1" Grid.ColumnSpan="9"
+      AlternationCount="2" 
+      DataContext="{StaticResource NotamsData}" 
+      ItemContainerStyle="{StaticResource NotamItemStyle}"
+      ItemsSource="{Binding}"
+                  clr:Commands.ListViewDoubleClickCommand="{Binding HandleDoubleClick}"
+      >
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Force Delete"
+                        Command="{Binding MenuRemoveCommand}" 
+                         CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}},Path=PlacementTarget.SelectedItem}"
+                         />
+                        <MenuItem Header="Force Archive"
+                        Command="{Binding MenuArchiveCommand}" 
+                         CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type ContextMenu}},Path=PlacementTarget.SelectedItem}"
+                         />
+                    </ContextMenu>
+
+                </ListView.ContextMenu>
+                <ListView.GroupStyle>
+                    <StaticResourceExtension 
+          ResourceKey="NotamGroupStyle" 
+          />
+                </ListView.GroupStyle>
+
+                <ListView.View>
+
+                    <GridView>
+                        <GridViewColumn 
+            Header="Type" 
+            DisplayMemberBinding="{Binding Path=Type}" 
+            />
+
+                        <GridViewColumn 
+            Header="Number" 
+            DisplayMemberBinding="{Binding Path=NotamNum}" 
+            />
+                        <GridViewColumn 
+            Header="Year" 
+            DisplayMemberBinding="{Binding Path=Year}" 
+            />
+
+                        <GridViewColumn 
+            Header="QCode" 
+            DisplayMemberBinding="{Binding Path=NotamCode}" 
+            />
+
+                        <GridViewColumn 
+            Header="Notam Type" 
+            DisplayMemberBinding="{Binding Path=NotamType}" 
+            />
+
+                        <GridViewColumn 
+            Header="FIR/Aero" 
+            DisplayMemberBinding="{Binding Path=FirAero}" 
+            />
+                        <GridViewColumn 
+            Header="Origin" 
+            DisplayMemberBinding="{Binding Path=Origin}" 
+            />
+                        <GridViewColumn 
+            Header="FIR" 
+            DisplayMemberBinding="{Binding Path=FIR}" 
+            />
+
+
+                        <GridViewColumn 
+            Header="ToDate" 
+            DisplayMemberBinding="{Binding Path=ToDate}" 
+            />
+
+                        <GridViewColumn 
+            Header="Perm/Est" 
+            DisplayMemberBinding="{Binding Path=PermEst}" 
+            />
+
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button    
+                                        Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}"
+                                    Content="Details"
+                                    Margin="0"
+                                    VerticalAlignment="Center"
+                                    Command="{Binding Path=DetailCommand}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+    </DockPanel>
+</UserControl>

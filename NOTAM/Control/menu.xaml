@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="NOTAM.Control.menu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             >
+
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Basic Information">
+                <MenuItem Header="_FIR"/>
+                <MenuItem Header="_Origins"/>
+                <MenuItem Header="_Aerodoms"/>
+                <MenuItem Header="_Distributions"/>
+                <MenuItem Header="_Notam Codes"/>
+                <MenuItem Header="_Countries"/>
+            </MenuItem>
+            <MenuItem Header="_NOTAM">
+            </MenuItem>
+            <MenuItem Header="_Preferences">
+                <MenuItem Header="_administration"/>
+                <MenuItem Header="_Audit Logs"/>
+                <MenuItem Header="_Archive"/>                
+            </MenuItem>
+            <MenuItem Header="_Reports">
+            </MenuItem>
+            <MenuItem Header="_Schedule">
+            </MenuItem>
+            <MenuItem Header="_Help">
+            </MenuItem>
+        </Menu>
+        <StackPanel></StackPanel>
+    </DockPanel>
+
+
+</UserControl>

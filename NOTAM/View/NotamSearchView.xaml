@@ -1,0 +1,286 @@
+﻿<UserControl x:Class="NOTAM.View.NotamSearchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />            
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type ValidationError}">
+                <TextBlock 
+          FontStyle="Italic"
+          Foreground="Red"
+          HorizontalAlignment="Left"
+          Margin="0,1"
+          Text="{Binding Path=ErrorContent}" 
+          />
+            </DataTemplate>
+        </Grid.Resources>
+        <Border Grid.Row="1" Grid.Column="0"   BorderThickness="1" BorderBrush="Gray"   />
+        <Border Grid.Row="1" Grid.Column="3"  BorderThickness="1" BorderBrush="Gray" />
+        <Border Grid.Row="3" Grid.Column="0"  BorderThickness="1" BorderBrush="Gray"/>
+        <Border Grid.Row="3" Grid.Column="3"  BorderThickness="1" BorderBrush="Gray"/>
+
+
+
+        <Label 
+      Grid.Row="0" Grid.Column="0" 
+      Content="Query Type" 
+      HorizontalAlignment="Left"      
+      />
+
+        
+            <Grid  Grid.Row="1" Grid.Column="0" Margin="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />         
+            </Grid.RowDefinitions>
+
+          
+            <!--<RadioButton GroupName="Type"  IsChecked="{Binding Path=IsNOF}" Content="NOF" Grid.Row="0" Grid.Column="0"></RadioButton>-->
+            <RadioButton GroupName="Type" IsChecked="{Binding Path=IsAD}" Content="AD/HP" Grid.Row="0" Grid.Column="0"></RadioButton>
+            <RadioButton GroupName="Type" IsChecked="{Binding Path=IsFIR}" Content="FIR" Grid.Row="1" Grid.Column="0" IsEnabled="False"></RadioButton>
+
+            <!--<TextBox Grid.Row="0" Grid.Column="3" IsEnabled="{Binding Path=IsNOF}" ></TextBox>-->
+            <ComboBox 
+      x:Name="aeroTxt" 
+      Grid.Row="0" Grid.Column="2"  IsEnabled="{Binding Path=IsAD}"
+      ItemsSource="{Binding Path=AerodomOptions, Mode=Default,UpdateSourceTrigger=PropertyChanged}"
+      SelectedItem="{Binding Path=Aerodom, ValidatesOnDataErrors=True}"
+      IsEditable="True" Height="22" />
+            <ComboBox 
+      x:Name="firTxt" 
+      Grid.Row="1" Grid.Column="3" IsEnabled="{Binding Path=IsFIR}"
+      ItemsSource="{Binding Path=FirOptions, Mode=OneTime}"
+      SelectedItem="{Binding Path=FIR, ValidatesOnDataErrors=True}"
+      IsEditable="True"/>
+
+        </Grid>
+      
+        <Label 
+      Grid.Row="0" Grid.Column="3" 
+      Content="Selection Criteria" 
+      HorizontalAlignment="Left"      
+      />
+        <Grid Grid.Row="1" Grid.Column="3" Margin="2"  >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <RadioButton Content="QCode" IsChecked="{Binding Path=IsQCode}" Grid.Row="0" Grid.Column="0" ></RadioButton>
+
+            <TextBox Grid.Row="1" Grid.Column="0" Height="25" MinWidth="85" MaxLength="4" IsEnabled="{Binding Path=IsQCode}" HorizontalAlignment="Left" VerticalAlignment="Top" Text="{Binding Path=QCode}"></TextBox>
+
+            <RadioButton Content="Qualifier" IsChecked="{Binding Path=IsQualifier}" Grid.Row="0" Grid.Column="3" ></RadioButton>
+
+            <Grid Grid.Row="1" Grid.Column="3">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Traffic" ></Label>
+                <TextBox Grid.Row="0" MaxLength="10" Text="{Binding Path=Traffic}" Grid.Column="1" IsEnabled="{Binding Path=IsQualifier}" ></TextBox>
+
+                <Label Grid.Row="1" Grid.Column="0" Content="Purpose" ></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" MaxLength="10" Text="{Binding Path=Purpose}" IsEnabled="{Binding Path=IsQualifier}" ></TextBox>
+
+                <Label Grid.Row="2" Grid.Column="0" Content="Scope" ></Label>
+                <TextBox Grid.Row="2" Grid.Column="1" MaxLength="10" Text="{Binding Path=Scope}" IsEnabled="{Binding Path=IsQualifier}" ></TextBox>
+
+
+            </Grid>
+
+                
+
+
+
+        </Grid>
+
+        <Label 
+      Grid.Row="2" Grid.Column="0" 
+      Content="Notam Status" 
+      HorizontalAlignment="Left"      
+      />
+        <Grid Grid.Row="3" Grid.Column="0" Margin="2" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="64*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="26*" />
+            </Grid.RowDefinitions>
+            <RadioButton Grid.Row="0" Grid.Column="0" IsChecked="{Binding Path=IsValid}" Content="VALID" GroupName="Status"></RadioButton>
+            <RadioButton Grid.Row="0" Grid.Column="1" Content="ARCHIVE" IsChecked="{Binding Path=IsObsolete}" GroupName="Status"></RadioButton>
+            <RadioButton Grid.Row="0" Grid.Column="2" Content="HOLD" IsChecked="{Binding Path=IsHold}" GroupName="Status"></RadioButton>
+            <RadioButton Grid.Row="0" Grid.Column="3" Content="All" IsChecked="{Binding Path=IsAllNotams}" GroupName="Status" IsEnabled="{Binding Path=IsFromIssueEnabled}"></RadioButton>
+            <Label Grid.Row="1" Grid.Column="0" Content="Notam Id" ></Label>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Row="0" Grid.Column="0" MaxLength="5" Text="{Binding Path=NotamNum}" MinWidth="55" ></TextBox>
+                <Border Grid.Row="0" Grid.Column="1" BorderThickness="5" ></Border>
+                <TextBox Grid.Row="0" Grid.Column="1" MaxLength="2" Text="{Binding Path=NotamYear}" MinWidth="25" PreviewTextInput="TextBox_PreviewTextInput" ></TextBox>
+            </Grid>
+            
+            <Label Grid.Row="2" Grid.Column="0" Content="Type" ></Label>
+            <ComboBox 
+      x:Name="typeTxt"
+      Grid.Row="2" ItemsSource="{Binding Path=TypeOptions, Mode=OneTime}"
+      SelectedItem="{Binding Path=Type, ValidatesOnDataErrors=True}"
+      IsEditable="True" Margin="0,0,3,0" Width="70" Grid.Column="1" />
+
+        </Grid>
+
+        <Label 
+      Grid.Row="2" Grid.Column="3" 
+      Content="Validity" 
+      HorizontalAlignment="Left"      
+      />
+        <Grid Grid.Row="3" Grid.Column="3" Margin="2" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <RadioButton Grid.Column="0" Grid.Row="0" Content="All" GroupName="validity"></RadioButton>
+            <RadioButton Grid.Column="1" Grid.Row="0" IsChecked="{Binding Path=IsPerm}" Content="PERM" GroupName="validity"></RadioButton>
+            <RadioButton Grid.Column="2" Grid.Row="0" IsChecked="{Binding Path=IsEst}" Content="EST EXPIRED" GroupName="validity"></RadioButton>
+            <Label  Grid.Column="0" Grid.Row="1" Content="Validity"></Label>
+            <Label  Grid.Column="0" Grid.Row="2" Content="Start"></Label>
+            <Label  Grid.Column="0" Grid.Row="3" Content="End"></Label>
+            <TextBox Grid.Column="1" MaxLength="10" Text="{Binding Path=FromDate}" Grid.Row="2" Grid.ColumnSpan="2"  ></TextBox>
+            <TextBox Grid.Column="1" MaxLength="10" Grid.Row="3" Grid.ColumnSpan="2" Text="{Binding Path=ToDate}" ></TextBox>
+            
+
+        </Grid>
+
+        <Grid Grid.Row="4" Grid.ColumnSpan="3"  Margin="2,0,0,4" Grid.RowSpan="3" Width="Auto">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Content="Item E):" 
+                  HorizontalAlignment="Left"      
+                  />
+
+            <TextBox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  Text="{Binding Path=EFreeText}" ></TextBox>
+            <Label 
+                  Grid.Row="1" Grid.Column="0"  Content="USER:" 
+                  HorizontalAlignment="Left"      
+                  />
+
+            <TextBox Grid.Column="1" Grid.Row="1" Width="50" HorizontalAlignment="Left"  Text="{Binding Path=UserText}" Height="Auto" VerticalAlignment="Bottom" IsEnabled="{Binding Path=IsUserEnabled}"></TextBox>
+            <Label 
+                  Grid.Row="1" Grid.Column="2"  Content="From Issue Date:" 
+                  HorizontalAlignment="Right"      
+                  />
+
+            <TextBox Grid.Column="3" Grid.Row="1" MinWidth="150" HorizontalAlignment="Left" IsEnabled="{Binding Path=IsFromIssueEnabled}" Text="{Binding Path=FromIssueDate}" PreviewTextInput="TextBox_PreviewTextInput" ></TextBox>
+            <Label 
+                  Grid.Row="1" Grid.Column="4"  Content="To Issue Date:" 
+                  HorizontalAlignment="Right"      
+                  />
+
+            <TextBox Grid.Column="5" Grid.Row="1" MinWidth="150" HorizontalAlignment="Left" IsEnabled="{Binding Path=IsToIssueEnabled}" Text="{Binding Path=ToIssueDate}" PreviewTextInput="TextBox_PreviewTextInput"></TextBox>
+
+        </Grid>
+
+        <Grid Grid.Row="7" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!-- SAVE BUTTON -->
+        <Button 
+      Grid.Column="1"
+      Command="{Binding Path=SearchCommand}"
+      Content="_Search"
+      HorizontalAlignment="Right"
+      Margin="4,2" 
+      MinWidth="60" />
+        <Button 
+      Grid.Row="0" Grid.Column="0" 
+      Command="{Binding Path=ResetCommand}"
+      Content="_Reset"
+      HorizontalAlignment="Right"
+      Margin="4,2" 
+      MinWidth="60" />
+</Grid>
+
+    </Grid>
+</UserControl>

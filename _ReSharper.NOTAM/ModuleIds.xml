@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="017E8BEF-C1D6-46EE-82BD-F3CABFC1BE26" ModuleId="NOTAM" />
+  <Module PersistentId="4488D142-D19D-4453-BB4B-D933E454CA4E" ModuleId="NOTAM.SERVICE" />
+  <Module PersistentId="73130708-D73A-4081-B598-002A11ED8A66" ModuleId="NOTAM.DA" />
+  <Module PersistentId="2F35205C-F1AD-4DB3-B602-4A38928D77A1" ModuleId="NOTAM.MODEL" />
+</Modules>
